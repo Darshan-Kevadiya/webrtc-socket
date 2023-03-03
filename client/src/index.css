@@ -1,0 +1,388 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.container {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+.myId {
+  margin-right: 5rem;
+  border-radius: 5px;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 2rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.call-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+video {
+  transform: scale(-1, 1);
+}
+.caller {
+  text-align: center;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  /* background-color: #606060 !important; */
+  /*background: #4776e6;*/ /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #8e54e9, #4776e6); */ /*Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(
+		to right,
+		#8e54e9,
+		#4776e6
+	);*/
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.CreateRoomWrapper {
+  height: "90vh";
+  width: 90%;
+  margin: 0 auto;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px;
+}
+.CreateRoom {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(242, 109, 33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.buttonWrapperJoin {
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  gap: 5px;
+}
+.JoinRoom {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(14, 114, 237);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+a:hover {
+  color: white !important;
+}
+.CreateRoom svg {
+  width: 48px;
+  height: auto;
+}
+.JoinRoom svg {
+  width: 40px;
+  height: auto;
+}
+.DateTimeWrapper {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+}
+.DateTimeWrapper img {
+  object-fit: cover;
+  border-radius: inherit;
+}
+.dateTime_Content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 45%;
+}
+.time {
+  font-size: 30px;
+  color: white;
+  letter-spacing: "5px";
+  text-shadow: -1px 2px 13px #1e0b0b;
+}
+.date {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: monospace sans-serif;
+  text-shadow: -1px 2px 13px #1e0b0b;
+  letter-spacing: "5px";
+}
+.joinTextBox {
+  background: transparent;
+  padding: 8px;
+  outline: none;
+  border: 1px solid rgb(58 96 135 / 55%);
+  border-radius: 5px;
+}
+.joinInputButton {
+  width: 40px;
+  height: auto;
+  display: flex;
+  background: rgb(58 96 135 / 55%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.joinInputButton svg {
+  color: white;
+}
+.meetingWrapper {
+  /* display: flex;
+    height: 100vh;
+	width: 100%;
+	margin: auto;
+	flex-wrap: wrap; */
+  /* background-color: #2196F3; */
+  /* display: grid;
+	grid-template-columns: auto auto;
+	column-gap: 20px;
+	row-gap: 20px;
+	padding: 10px; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+  gap: 20px;
+}
+.conference {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  border-radius: 10px;
+  gap: 20px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.Dish {
+  overflow: auto;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex: 1;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  gap: 10px;
+}
+.Dish > div {
+  position: relative;
+  vertical-align: middle;
+  align-self: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: var(--shadow-dark);
+  background: #fff;
+  animation: show 0.4s ease;
+}
+
+/* Video (check the nice property object-fit) */
+.Dish > div video {
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-transition: margin-top 1s ease-in-out;
+  -moz-transition: margin-top 1s ease-in-out;
+  -o-transition: margin-top 1s ease-in-out;
+  transition: margin-top 1s ease-in-out;
+}
+
+.cardWrapper {
+  /* position: relative;
+    display: flex;
+    min-width: 124px;
+    height: 100%;
+    min-height: 124px;
+    overflow: hidden;
+    background: #242736;
+    border-radius: 14px;
+	width: calc(50% - 5px);
+    height: calc(50% - 5px); */
+  display: flex;
+  background: #242736;
+}
+
+.meetingWrapper video {
+  height: 100%;
+  width: 80%;
+  object-fit: cover;
+  margin: auto;
+}
+.JoinRoomCard {
+  width: 530px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 0px 20px;
+}
+.micVideoWrapper {
+  /* position: absolute;
+	bottom: 20px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+.micVideoWrapperJoinRoom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.mediaButton {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.mediaOff {
+  background: rgb(234, 67, 53);
+  border: 1px solid rgb(234, 67, 53);
+  color: white;
+}
+.mediaOn {
+  /* background: rgb(234,67,53); */
+  border: 1px solid white;
+  color: white;
+}
+.mediaOn:hover {
+  box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#cameraOFFWrapper {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: monospace;
+  border-radius: inherit;
+}
+.CopyLink {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  box-shadow: 0px 0px 20px;
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.linkWrapper {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .CreateRoomWrapper {
+    width: 80%;
+    height: 75vh;
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .CreateRoomWrapper {
+    width: 65%;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .CreateRoomWrapper {
+    width: 50%;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .CreateRoomWrapper {
+    width: 45%;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .CreateRoomWrapper {
+    width: 40%;
+  }
+  .time {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .CreateRoomWrapper {
+    width: 30%;
+  }
+}
